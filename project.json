@@ -1,0 +1,42 @@
+{
+  "projectType": "library",
+  "root": "libs/user-auth-controls",
+  "sourceRoot": "libs/user-auth-controls/src",
+  "prefix": "kaszona",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:package",
+      "outputs": ["dist/libs/user-auth-controls"],
+      "options": {
+        "project": "libs/user-auth-controls/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/user-auth-controls/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/user-auth-controls/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/user-auth-controls"],
+      "options": {
+        "jestConfig": "libs/user-auth-controls/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/user-auth-controls/**/*.ts",
+          "libs/user-auth-controls/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

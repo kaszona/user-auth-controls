@@ -1,0 +1,53 @@
+<div class="container">
+    <div class="row justify-content-center">
+
+        <div class="col-md-9 col-lg-6">
+
+            <div class="card o-hidden border-0 shadow-lg my-5">
+
+                <div class="card-body p-0">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="p-5">
+                                <div class="text-center">
+                                    <h4 class="m-4  font-weight-bold text-warning">Sign Up</h4>
+                                </div>
+                                <form class="user" [formGroup]="signupForm" >
+                                    <div class="form-group">
+                                        <input type="text" name="username"
+                                            class="form-control form-user" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" name="password" 
+                                            class="form-control form-user" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" name="email"
+                                            class="form-control form-user" />
+                                    </div>
+                                    <input type="submit" value="Submit" class="btn btn-warning btn-user btn-block">
+                                </form>
+                                <hr />
+                            <div class="text-center">
+                                <a class="small" href="ForgotPassword.aspx">Forgot Password?</a>
+                            </div>
+                            <div class="text-center">
+                                <a class="small" [routerLink]="['/login']">Already have an account? Login!</a>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <footer class="sticky-footer">
+        <div class="container my-auto">
+            <div class="copyright text-center my-auto">
+                <span class="text-light font-weight-bolder">&copy; </span>
+            </div>
+        </div>
+    </footer>
+</div>
